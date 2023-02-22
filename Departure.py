@@ -29,14 +29,7 @@ class Train_Departure(Stations):
         train_a.sort(key = lambda x: x[1], reverse = True)  # sort based on 2nd element
         train_b.sort(key = lambda x: x[1], reverse = True)  # sort based on 2nd element
 
-        if len(train_b) == 0 and len(train_a) == 0:
-            res = "DEPARTURE JOURNEY_ENDED"
-        elif len(train_b) == 0:
-            res = "DEPARTURE TRAIN_A ENGINE"
-        elif len(train_a) == 0:
-            res = "DEPARTURE TRAIN_B ENGINE"
-        else:
-            res = "DEPARTURE TRAIN_AB ENGINE ENGINE"
+        res = "DEPARTURE TRAIN_AB ENGINE ENGINE"
 
         # merge sort : merging two sorted arrays
         i = 0
